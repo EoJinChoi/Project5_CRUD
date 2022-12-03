@@ -16,7 +16,7 @@ public class BoardController
 
     @RequestMapping(value = "posts", method = RequestMethod.GET)
     public String boardlist(Model model){
-        model.addAttribute("posts", boardService.getItemList());
+        model.addAttribute("list", boardService.getItemList());
         return "posts";
     }
 
@@ -37,7 +37,7 @@ public class BoardController
     @RequestMapping(value = "/editform/{id}" , method = RequestMethod.GET)
     public String editPost(@PathVariable("id") Integer id, Model model){
         BoardVO boardVO = boardService.getItem(id);
-        model.addAttribute("u", boardVO);
+        model.addAttribute("boardVO", boardVO);
         return "editform";
     }
 

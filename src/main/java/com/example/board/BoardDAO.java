@@ -47,9 +47,9 @@ public class BoardDAO
     }
 
     class BoardRowMapper implements RowMapper<BoardVO>{
-        Date current = new Date(new Timestamp(System.currentTimeMillis()).getTime());
         @Override
         public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException {
+            System.out.println("Reading start!!!!  " + rs.getString("item"));
             BoardVO data = new BoardVO();
             data.setSeq(rs.getInt("seq"));
             data.setItem(rs.getString("item"));

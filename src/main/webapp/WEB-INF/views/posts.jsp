@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@page import="com.example.board.BoardDAO, com.example.board.BoardVO,java.util.*"%>
 <%@ page import="java.io.File" %>
@@ -26,7 +26,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #006bb3;
+  background-color: #5695c0;
   color: white;
 }
 .photo{
@@ -65,17 +65,17 @@
 </tr>
 <c:forEach items="${list}" var="u">
 	<tr>
-		<td>${u.getSeq()}</td>
-		<td>${u.getItem()}</td>
+		<td>${u.seq}</td>
+		<td>${u.item}</td>
 <%--		<td><img src="${pageContext.request.contextPath }/upload/${u.getPhoto()}" class = "photo"></td>--%>
-		<td>${u.getWriter()}</td>
-		<td>${u.getPrice()}</td>
-		<td>${u.getContent()}</td>
-		<td>${u.getMethod()}</td>
-		<td>${u.getRegDate()}</td>
-		<td>${u.getUpdateAt()}</td>
-		<td><a href="editform/${u.getSeq()}">Edit</a></td>
-		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
+		<td>${u.writer}</td>
+		<td>${u.price}</td>
+		<td>${u.content}</td>
+		<td>${u.method}</td>
+		<td>${u.regDate}</td>
+		<td>${u.updateAt}</td>
+		<td><a href="editform/${u.seq}">Edit</a></td>
+		<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
 	</tr>
 </c:forEach>
 </table>

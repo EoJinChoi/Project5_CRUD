@@ -36,18 +36,31 @@
       <version>5.3.18</version>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>Project5_CRUD</finalName>
+<!--  <build>-->
+<!--    <finalName>Project5_CRUD</finalName>-->
 
+<!--    <plugins>-->
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-compiler-plugin</artifactId>-->
+<!--        <version>3.8.0</version>-->
+<!--        <configuration>-->
+<!--          <release>1.8</release>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
+<!--    </plugins>-->
+<!--  </build>-->
+  <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <release>1.8</release>
-        </configuration>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
       </plugin>
     </plugins>
   </build>
+  <properties>
+    <maven.compiler.source>7</maven.compiler.source>
+    <maven.compiler.target>7</maven.compiler.target>
+  </properties>
 </project>
