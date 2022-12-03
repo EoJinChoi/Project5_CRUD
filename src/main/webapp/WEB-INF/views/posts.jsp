@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+
 <%@page import="com.example.board.BoardDAO, com.example.board.BoardVO,java.util.*"%>
 <%@ page import="java.io.File" %>
-<%--<%@ page import="com.oreilly.servlet.MultipartRequest" %>--%>
-<%--<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>--%>
-<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +42,7 @@
 </script>
 </head>
 <body>
-<h1>자유게시판</h1>
+<h1>중고물품 거래 서비스</h1>
 <%--<%--%>
 <%--	BoardDAO boardDAO = new BoardDAO();--%>
 <%--	List<BoardVO> list = boardDAO.getItemsList();--%>
@@ -54,7 +53,7 @@
 <tr>
 	<th>Seq</th>
 	<th>Item</th>
-	<th>Photo</th>
+<%--	<th>Photo</th>--%>
 	<th>Writer</th>
 	<th>Price</th>
 	<th>Content</th>
@@ -80,6 +79,6 @@
 	</tr>
 </c:forEach>
 </table>
-<br/><a href="addpostform.jsp">Add New Post</a>
+<br/><a href="add">Add New Post</a>
 </body>
 </html>
