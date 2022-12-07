@@ -1,5 +1,6 @@
 package com.example.board;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -14,11 +15,12 @@ import java.util.Date;
 public class BoardDAO
 {
     @Autowired
-    JdbcTemplate template;
+//    JdbcTemplate template;
+    SqlSession sqlSession;
 
-    public void setTemplate(JdbcTemplate template){
-        this.template = template;
-    }
+//    public void setTemplate(JdbcTemplate template){
+//        this.template = template;
+//    }
 
     private final String ITEMS_INSERT = "insert into ITEMS (item,  writer, price, content, method, regDate, updateAt) values (?,?,?,?,?,?,?)";
     private final String ITEMS_UPDATE = "update ITEMS set item=?, writer=?, price=?, content=?, method=? where seq=?";
@@ -27,23 +29,31 @@ public class BoardDAO
     private final String ITEMS_LIST = "select * from ITEMS order by seq desc";
 
     public int insertItems(BoardVO vo){
-        return template.update(ITEMS_INSERT, new Object[]{vo.getItem(), vo.getWriter(), vo.getPrice(), vo.getContent(), vo.getMethod(), vo.getRegDate(), vo.getUpdateAt()});
+        int result = sqlSession.insert("Board.insertBoard", vo);
+        return result;
+//        return template.update(ITEMS_INSERT, new Object[]{vo.getItem(), vo.getWriter(), vo.getPrice(), vo.getContent(), vo.getMethod(), vo.getRegDate(), vo.getUpdateAt()});
     }
 
     public int deleteItems(int id){
-        return template.update(ITEMS_DELETE, new Object[]{id});
+//        return template.update(ITEMS_DELETE, new Object[]{id});
+        return sqlSession.delete("Board.deleteBoard", id);
     }
 
     public int updateItems(BoardVO vo){
-        return template.update(ITEMS_UPDATE, new Object[]{vo.getItem(), vo.getWriter(), vo.getPrice(), vo.getContent(), vo.getMethod(), vo.getSeq()});
+        return sqlSession.update("Board.updateBoard", vo);
+//        return template.update(ITEMS_UPDATE, new Object[]{vo.getItem(), vo.getWriter(), vo.getPrice(), vo.getContent(), vo.getMethod(), vo.getSeq()});
     }
 
     public BoardVO getItems(int seq){
-        return template.queryForObject(ITEMS_GET, new Object[]{seq}, new BoardRowMapper());
+        BoardVO one = sqlSession.selectOne("Board.getBoard", seq);
+        return one;
+//        return template.queryForObject(ITEMS_GET, new Object[]{seq}, new BoardRowMapper());
     }
 
     public List<BoardVO> getItemsList(){
-        return template.query(ITEMS_LIST, new BoardRowMapper());
+        List<BoardVO> list = sqlSession.selectList("Board.getBoardList");
+        return list;
+//        return template.query(ITEMS_LIST, new BoardRowMapper());
     }
 
     class BoardRowMapper implements RowMapper<BoardVO>{
