@@ -33,6 +33,12 @@
 	width: 150px;
 	hieght: 120px;
 }
+button{
+	position: absolute;
+	right: 10px;
+	color: #5695c0;
+	border-collapse: collapse;
+}
 </style>
 <script>
 	function delete_ok(id){
@@ -80,5 +86,6 @@
 </c:forEach>
 </table>
 <br/><a href="add">Add New Post</a>
+<button type="logout" onclick="location.href='../login/logout'">Logout</button>
 </body>
 </html>

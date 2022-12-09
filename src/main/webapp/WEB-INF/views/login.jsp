@@ -14,7 +14,16 @@
     <style>
         img, label{display: inline-block;}
         label{width:130px}
-        button{background-color: #5695c0; color: white; fontsize:15px}
+        button{
+            width: 45px;
+            height: 45px;
+            color: #5695c0;
+            fontsize:15px;
+            margin-top: 10px;
+            position: absolute;
+            right: 515px;
+            bottom: 415px;
+        }
     </style>
 </head>
 <body>
