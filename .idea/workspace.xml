@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f2b45ba-d1c2-43f3-bf9e-a783c83e9f47" name="Changes" comment="complete!!!">
+    <list default="true" id="7f2b45ba-d1c2-43f3-bf9e-a783c83e9f47" name="Changes" comment=" team complete!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +191,7 @@
       <workItem from="1670332285303" duration="304000" />
       <workItem from="1670406421542" duration="18333000" />
       <workItem from="1670565848204" duration="4106000" />
-      <workItem from="1670928180601" duration="3426000" />
+      <workItem from="1670928180601" duration="4080000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1670064778001</created>
@@ -229,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670570294720</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=" team complete!!!">
+      <created>1670933038037</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670933038037</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +257,7 @@
     <MESSAGE value="temporary" />
     <MESSAGE value="complete" />
     <MESSAGE value="complete!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete!!!" />
+    <MESSAGE value=" team complete!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value=" team complete!!!" />
   </component>
 </project>
