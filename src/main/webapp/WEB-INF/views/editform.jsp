@@ -19,6 +19,10 @@
             <td><form:input path="item"/></td>
         </tr>
         <tr>
+            <td>Status:</td>
+            <td><form:checkbox path="" value="중고"/>중고<form:checkbox path="" value="새제품"/>새제품</td>
+        </tr>
+        <tr>
             <td>Writer:</td>
             <td><form:input path="writer"/></td>
         </tr>
@@ -32,7 +36,7 @@
         </tr>
         <tr>
             <td>Method:</td>
-            <td><form:input path="method"/></td>
+            <td><form:radiobutton path="method" value="직거래"/>직거래<form:radiobutton path="method" value="택배"/>택배</td>
         </tr>
     </table>
     <input type="submit" value="Edit Post"/>
